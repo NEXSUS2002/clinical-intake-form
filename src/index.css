@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy:        #0D1B2A;
+  --color-navy-light:  #1e3a5f;
+  --color-teal:        #0E7C7B;
+  --color-teal-light:  #13A69B;
+  --color-teal-pale:   #E6F4F4;
+  --color-gold:        #C9994A;
+  --color-gold-light:  #F9F0E3;
+  --color-slate-dim:   #475569;
+  --color-slate-line:  #CBD5E1;
+  --color-app-bg:      #EFF3F8;
+  --color-error:       #DC2626;
+  --color-error-bg:    #FEF2F2;
+  --color-error-line:  #FECACA;
+  --color-success:     #059669;
+  --color-success-bg:  #ECFDF5;
+  --color-warn:        #D97706;
+  --color-warn-bg:     #FFFBF0;
+  --color-warn-line:   #FDE68A;
+  --font-display:      'Playfair Display', Georgia, serif;
+  --font-body:         'DM Sans', system-ui, sans-serif;
+  --shadow-card:       0 4px 24px rgba(13,27,42,0.07), 0 1px 4px rgba(13,27,42,0.04);
+  --shadow-teal:       0 4px 14px rgba(14,124,123,0.35);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background-color: var(--color-app-bg); color: var(--color-navy); -webkit-font-smoothing: antialiased; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 99px; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%  { transform: translateX(-4px); }
+  40%  { transform: translateX(4px); }
+  60%  { transform: translateX(-2px); }
+  80%  { transform: translateX(2px); }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.3s ease forwards; }
+.animate-fade-in    { animation: fadeIn   0.2s ease forwards; }
+.animate-shake      { animation: shake 0.35s ease; }
+
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll table { min-width: 520px; }
+
+:focus-visible { outline: 2px solid var(--color-teal); outline-offset: 2px; border-radius: 6px; }
+input[type='radio'], input[type='checkbox'] { accent-color: var(--color-teal); cursor: pointer; }
