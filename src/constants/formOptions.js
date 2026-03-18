@@ -78,7 +78,7 @@ export const PSYCHOLOGISTS = [
 
 // ─── Demographics ─────────────────────────────────────────────────
 export const SEX_OPTIONS         = ['Male', 'Female', 'Non-Binary', 'Prefer not to say']
-export const ETHNICITY_OPTIONS   = ['Malay', 'Chinese', 'Indian', 'Other']
+export const ETHNICITY_OPTIONS   = ['Yoruba', 'Igbo', 'Hausa', 'Other']
 export const RESPONDENT_OPTIONS  = ['Father', 'Mother', 'Self', 'Guardian', 'Other']
 
 // ─── Concern Areas ────────────────────────────────────────────────
